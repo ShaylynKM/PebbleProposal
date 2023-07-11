@@ -1,31 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class MenuThings : MonoBehaviour
 {
     public void OnStartButton()
     {
-
+        SceneManager.LoadScene("Level1");
     }
 
-    public void OnOptionsButton()
+    public void OnSettingsButton()
     {
 
     }
 
-    public void OnQuitButton()
+    public void OnExitButton()
     {
-
+        Application.Quit();
+        EditorApplication.isPlaying = false;
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
