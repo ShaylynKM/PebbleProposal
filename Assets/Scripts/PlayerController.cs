@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // Variables for player movement and behavior
     private float horizontal; // Input for horizontal movement
     private float speed = 8f; // Movement speed
+    private float maxSpeed = 12f; // The fastest the player can travel on ice
     private float jumpingPower = 7f; // Jumping force
     private float hurtTime = 1f; // Duration of invulnerability after getting hurt
     private float hurtRecoverTime = 3f; // Total duration of hurt recovery time
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private bool isInputEnabled = true; // Flag to determine if player input is enabled
     private bool isFacingRight = true; // Flag to determine if the player is facing right
     private bool isJumping = false; // Flag to determine if the player is jumping
+    private bool isMoving = false; // Whether or not player is moving
 
     // References to components and objects in the scene
     [SerializeField] private Rigidbody2D rb; // Reference to the player's Rigidbody2D component
@@ -24,7 +26,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Layer mask to determine what is considered ground
     [SerializeField] private GameObject snowballPrefab; // Reference to the snowball prefab
     [SerializeField] private float throwSpeed = 20f; // Force applied to the thrown snowball
-
 
     private void Update()
     {
@@ -41,6 +42,11 @@ public class PlayerController : MonoBehaviour
         if (isInputEnabled)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y); // Set the player's velocity for horizontal movement
+            isMoving = true;
+        }
+        else 
+        {
+            isMoving = false;
         }
     }
 

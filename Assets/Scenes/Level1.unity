@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 8228417896735501467, guid: 7263c3e5520940c4294ab5a25c33c9a3, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f5c66a038ed1f6d44a4f0d8b91b30963, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7263c3e5520940c4294ab5a25c33c9a3, type: 3}
 --- !u!1 &92007476
@@ -2571,6 +2575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6038907951164363687, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1332553303247129229, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3598,6 +3606,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2124483335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5726023778328914222, guid: e65ed2ea0cbe98c44b90cde8ad534148, type: 3}
+  m_PrefabInstance: {fileID: 6957619344724248623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2134088792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,6 +3857,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 374689387}
     m_Modifications:
+    - target: {fileID: -6038907951164363687, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f5c66a038ed1f6d44a4f0d8b91b30963, type: 2}
+    - target: {fileID: -6038907951164363687, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1332553303247129229, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3888,6 +3909,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1644195767103693675, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f5c66a038ed1f6d44a4f0d8b91b30963, type: 2}
     - target: {fileID: 6629790192573595736, guid: 28e14d959fdd8834ba22920cba30964e, type: 3}
       propertyPath: m_Name
       value: TiltingPlatform
@@ -3966,6 +3991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IcyPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 7340983276817506584, guid: e65ed2ea0cbe98c44b90cde8ad534148, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65ed2ea0cbe98c44b90cde8ad534148, type: 3}
 --- !u!4 &6957619344724248624 stripped
@@ -3973,3 +4002,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2080256644601533363, guid: e65ed2ea0cbe98c44b90cde8ad534148, type: 3}
   m_PrefabInstance: {fileID: 6957619344724248623}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &6957619344724248627
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124483335}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 2
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 63ab9b7d7bc22cb4484bcd6f753f72bb, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
