@@ -11,6 +11,11 @@ public class MenuThings : MonoBehaviour
     [SerializeField]
     public GameObject SettingsScreen;
 
+    void Start()
+    {
+        SettingsScreen.SetActive(false);
+    }
+
     public void ToggleSettings()
     {
         SettingsOpen = !SettingsOpen;
