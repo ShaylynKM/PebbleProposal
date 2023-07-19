@@ -82,7 +82,7 @@ public class EnemyAI : MonoBehaviour
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>(); // Get the PlayerController component from the player object
 
-            if (IsPlayerAbove(collision.contacts[0].point) && rb.velocity.y <= 0f)
+            if (IsPlayerAbove(collision.contacts[0].point) && rb.velocity.y >= 0f)
             {
                 // Player jumped on top of the enemy
                 player.KillEnemy(); // Call the KillEnemy function of the player
