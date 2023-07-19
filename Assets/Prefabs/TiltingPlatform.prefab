@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2159948662881459002}
   - component: {fileID: 1644195767103693675}
   - component: {fileID: -6038907951164363687}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TiltingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
