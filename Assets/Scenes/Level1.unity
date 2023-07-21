@@ -2042,6 +2042,7 @@ GameObject:
   - component: {fileID: 1441467049}
   - component: {fileID: 1441467048}
   - component: {fileID: 1441467052}
+  - component: {fileID: 1441467053}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2145,6 +2146,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1744964839}
+--- !u!114 &1441467053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441467047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bfbbc14ae4eaa4aa7d78de6eba280c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SettingsOpen: 0
+  SettingsScreen: {fileID: 0}
 --- !u!1 &1442083022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2326,30 @@ PrefabInstance:
     - target: {fileID: 1286908143687769791, guid: c323f28df69feb94b89cf9366df76296, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286908143899722208, guid: c323f28df69feb94b89cf9366df76296, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1441467053}
+    - target: {fileID: 1286908143899722208, guid: c323f28df69feb94b89cf9366df76296, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnStartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286908143899722208, guid: c323f28df69feb94b89cf9366df76296, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuThings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772885376348855284, guid: c323f28df69feb94b89cf9366df76296, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1441467053}
+    - target: {fileID: 8772885376348855284, guid: c323f28df69feb94b89cf9366df76296, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772885376348855284, guid: c323f28df69feb94b89cf9366df76296, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuThings, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c323f28df69feb94b89cf9366df76296, type: 3}
