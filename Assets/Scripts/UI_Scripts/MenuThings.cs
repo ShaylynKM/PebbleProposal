@@ -11,6 +11,9 @@ public class MenuThings : MonoBehaviour
     [SerializeField]
     public GameObject SettingsScreen;
 
+    public AudioClip ButtonClick;
+    public AudioClip PlayClick;
+
     public void ToggleSettings()
     {
         SettingsOpen = !SettingsOpen;
