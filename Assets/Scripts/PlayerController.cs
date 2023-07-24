@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float hurtTime = 1f; // Duration of invulnerability after getting hurt
     private float hurtRecoverTime = 3f; // Total duration of hurt recovery time
     public int health = 5; // Player's health
+    public TextMeshProUGUI currentLivesText;
 
     // Flags for player behavior
     private bool isAttackable = true; // Flag to determine if the player can take damage
@@ -27,7 +29,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject snowballPrefab; // Reference to the snowball prefab
     [SerializeField] private float throwSpeed = 20f; // Force applied to the thrown snowball
 
-    private void Update()
+    void Start()
+    {
+        currentLivesText = GameObject.Find("PlayerLives").GetComponent<TextMeshProUGUI>();
+    }
+
+    void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal"); // Get horizontal input from the player
 
@@ -136,6 +143,8 @@ public class PlayerController : MonoBehaviour
 
                 // Start the invulnerability coroutine
                 StartCoroutine(MakePlayerInvulnerable());
+
+                currentLivesText.text = "Lives: " + health.ToString();
             }
         }
     }
@@ -176,8 +185,8 @@ public class PlayerController : MonoBehaviour
         isInputEnabled = true; // Enable player input
     }
 
-    private void Die()
+    public void Die()
     {
-        // Add code for player death
+        Destroy(gameObject);
     }
 }
