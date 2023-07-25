@@ -8,14 +8,31 @@ using TMPro;
 public class MenuThings : MonoBehaviour
 {
     public bool SettingsOpen = false;
+    public bool GameOverOpen = false;
 
     [SerializeField]
     public GameObject SettingsScreen;
-
+    public GameObject GameOverScreen;
     public AudioClip ButtonClick;
     public AudioClip PlayClick;
 
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("main");
+    }
+
     public void ToggleSettings()
+    {
+        GameOverOpen = !GameOverOpen;
+        SettingsScreen.SetActive(GameOverScreen);
+    }
+
+    public void ToggleGameOver()
     {
         SettingsOpen = !SettingsOpen;
         SettingsScreen.SetActive(SettingsOpen);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float hurtRecoverTime = 3f; // Total duration of hurt recovery time
     public int health = 5; // Player's health
     public TextMeshProUGUI currentLivesText;
+    private MenuThings menuThings;
 
     // Flags for player behavior
     private bool isAttackable = true; // Flag to determine if the player can take damage
@@ -28,10 +30,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Layer mask to determine what is considered ground
     [SerializeField] private GameObject snowballPrefab; // Reference to the snowball prefab
     [SerializeField] private float throwSpeed = 20f; // Force applied to the thrown snowball
+    [SerializeField] private GameObject gameOverScreen;
 
     void Start()
     {
         currentLivesText = GameObject.Find("PlayerLives").GetComponent<TextMeshProUGUI>();
+        menuThings = GameObject.Find("Canvas").GetComponent<MenuThings>();
+        gameOverScreen.SetActive(false);
     }
 
     void Update()
@@ -42,6 +47,11 @@ public class PlayerController : MonoBehaviour
         Jump(); // Handle player jumping
         Flip(); // Flip the player sprite based on movement direction
         ThrowSnowball();
+
+        if(health <= 0)
+        {
+            Die();
+        }
     }
 
     private void Move()
@@ -120,6 +130,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
+        currentLivesText.text = "Lives: " + health.ToString();
         if (isAttackable)
         {
             if (gameObject.layer == LayerMask.NameToLayer("PlayerInvulnerable"))
@@ -143,8 +154,6 @@ public class PlayerController : MonoBehaviour
 
                 // Start the invulnerability coroutine
                 StartCoroutine(MakePlayerInvulnerable());
-
-                currentLivesText.text = "Lives: " + health.ToString();
             }
         }
     }
@@ -187,6 +196,14 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("Die() function called.");
+        gameOverScreen.SetActive(true);
+        Debug.Log("ded");
         Destroy(gameObject);
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
