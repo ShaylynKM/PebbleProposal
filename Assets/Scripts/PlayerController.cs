@@ -201,9 +201,4 @@ public class PlayerController : MonoBehaviour
         Debug.Log("ded");
         Destroy(gameObject);
     }
-
-    public void Reload()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
 }
