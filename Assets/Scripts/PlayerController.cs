@@ -139,7 +139,6 @@ public class PlayerController : MonoBehaviour
             }
 
             health--; // Decrease player's health
-            Debug.Log(health);
 
             // Add code to trigger hurt animation
 
@@ -196,9 +195,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Die() function called.");
         gameOverScreen.SetActive(true);
-        Debug.Log("ded");
         Destroy(gameObject);
     }
 }

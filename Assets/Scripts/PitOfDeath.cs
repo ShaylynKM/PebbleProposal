@@ -20,11 +20,9 @@ public class PitOfDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger entered");
         if (collision.CompareTag("Player"))
         {
             playerController.health = 0;
-            Debug.Log("you have fallen");
         }
     }
 }
