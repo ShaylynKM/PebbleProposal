@@ -65,7 +65,9 @@ public class MenuThings : MonoBehaviour
     public void OnExitButton()
     {
         Application.Quit();
-        EditorApplication.isPlaying = false;
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+        #endif
     }
 
 }
