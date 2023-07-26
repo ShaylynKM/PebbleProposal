@@ -40,7 +40,7 @@ public class MenuThings : MonoBehaviour
 
     public void OnStartButton()
     {
-        SceneManager.LoadScene("Whiteboxing");
+        SceneManager.LoadScene("Level1");
     }
 
     //public void OnSettingsButton()
