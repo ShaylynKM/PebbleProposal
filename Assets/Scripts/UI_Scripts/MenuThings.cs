@@ -9,13 +9,22 @@ public class MenuThings : MonoBehaviour
 {
     public bool SettingsOpen = false;
     public bool GameOverOpen = false;
+    public bool PauseOpen = false;
 
     [SerializeField]
     public GameObject SettingsScreen;
+    public GameObject PauseScreen;
     public GameObject GameOverScreen;
     public AudioClip ButtonClick;
     public AudioClip PlayClick;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
+    }
     public void Reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -28,14 +37,14 @@ public class MenuThings : MonoBehaviour
 
     public void ToggleSettings()
     {
-        GameOverOpen = !GameOverOpen;
-        SettingsScreen.SetActive(GameOverScreen);
-    }
-
-    public void ToggleGameOver()
-    {
         SettingsOpen = !SettingsOpen;
         SettingsScreen.SetActive(SettingsOpen);
+    }
+
+    public void TogglePause()
+    {
+        PauseOpen = !PauseOpen;
+        PauseScreen.SetActive(PauseOpen);
     }
 
     public void OnStartButton()
