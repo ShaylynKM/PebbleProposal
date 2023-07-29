@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// I would like this abstracted into a general base class and then use inheritance for particular types of enemies. For example, there should be a SealAI class inheriting from EnemyAI that has similar commands to other types of enemies. It would also be nice to have a bit more variety in enemies, even if their behaviour is simple. A seal, potentially a bird, or just other things you could jump off. It does not need to be particularly complex, but think about how simple enemies are in something like Super Mario World, but they still feel distinct. https://www.youtube.com/watch?v=x-tjNvynnRQ. A few more examples for a 2D game are necessary when they don't need to have particularly complex behaviours (you don't need to do anything like a Charging Chuck, for example). That video should hopefully give some ideas.
+/// </summary>
 public class EnemyAI : MonoBehaviour
 {
     public int health = 3; // Enemy's health

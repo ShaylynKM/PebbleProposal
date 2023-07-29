@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// I would like some changes here to try and get animations, and it would be nice to have some more complexity for the movement. I do think that you should try and follow something like the following tutorial for some 2d movement ideas: https://www.youtube.com/watch?v=dwcT-Dch0bA&t=0s. Some suggestion for other platform ideas: traps (timed spikes or other damage) and something like moving platforms. Also consider having platforms that spin on their own rather than ones that the player spins, and potentially platforms you could bounce off of. 
+/// For comments in your code, I do not think it is necessary to comment every single line of code, especially when it is obvious. Things like summaries can be good for letting me know what the general idea for some things are, or to explain more complex logic. Your comments, as is, I don't read in full because some things are intuitive (health, for example).
+/// I like the character bouncing off of the seal but enhance this effect, and try to think about how it could be implemented in level design. A lot of the ways I like this type of platforming are done in a lot of Super Mario World rom hacks (see this video for some rom hack examples: https://www.youtube.com/watch?v=bS-t4rWma50_
+/// For 2d animation here is a link: https://www.youtube.com/watch?v=hkaysu1Z-N8. In fact, all of these old Brackey videos will be helpful: https://www.youtube.com/watch?v=on9nwbZngyw.
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     // Variables for player movement and behavior
@@ -31,6 +36,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject snowballPrefab; // Reference to the snowball prefab
     [SerializeField] private float throwSpeed = 20f; // Force applied to the thrown snowball
     [SerializeField] private GameObject gameOverScreen;
+
+    //friction changes
+
 
     void Start()
     {

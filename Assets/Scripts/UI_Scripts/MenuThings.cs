@@ -4,7 +4,9 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+/// <summary>
+/// In generalf or the UI, I think it is cute but I would very much like to see more levels with some sort of UI screen show up to say you beat a level. You will also need to look at how to persist what you have gained from one level to the next. What you are looking for is persistence, which will allow for information to be stored. Here is a good tutorial for this: https://learn.unity.com/tutorial/implement-data-persistence-between-scenes#
+/// </summary>
 public class MenuThings : MonoBehaviour
 {
     public bool SettingsOpen = false;
