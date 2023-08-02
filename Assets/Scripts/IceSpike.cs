@@ -20,7 +20,6 @@ public class IceSpike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger entered");
         if (collision.CompareTag("Player"))
         {
             playerController.TakeDamage();

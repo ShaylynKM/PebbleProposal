@@ -25168,6 +25168,10 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1376053439}
+    - target: {fileID: 6436466467366368747, guid: e6b7d0c6a2320544bb66e420009bf5fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6636554577423777060, guid: e6b7d0c6a2320544bb66e420009bf5fc, type: 3}
       propertyPath: m_RootOrder
       value: 59
